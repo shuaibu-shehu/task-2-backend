@@ -6,7 +6,8 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "dev": "nodemon src/index.ts",
-    "vercel-build":"echo hello"
+    "build": "tsc",
+    "vercel-build": "echo hello"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +15,13 @@
   "description": "",
   "dependencies": {
     "@prisma/client": "^5.16.1",
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "nodemon": "^3.1.4",
-    "prisma": "^5.16.1"
+    "prisma": "^5.16.1",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17"
   }
 }
