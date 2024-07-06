@@ -1,8 +1,8 @@
-import e from "express";
+import e, {Request, Response} from "express";
 
 const app = e();
 
-app.get("/", (req, res) => {
+app.get("/", (req:Request, res: Response) => {
     res.send("Hello Worled");
 });
 
