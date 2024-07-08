@@ -40,7 +40,7 @@ export const signUp = async (req:Request, res: Response) => {
     
     const hash = await bcrypt.hash(password, 10);
      
-     const token = jwt.sign({email}, process.env.SECRET!, {expiresIn: "1h"});
+     const token = jwt.sign({email}, process.env.SECRET||"secret", {expiresIn: "1h"});
 
    const user =  await db.user.create({
         data: {
@@ -78,6 +78,8 @@ export const signUp = async (req:Request, res: Response) => {
 
     
    } catch (error) {
+    console.log(error);
+    
         res.status(400).json({
             status: "Bad request",
             message: "Registration unsuccessful",
