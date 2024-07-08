@@ -16,7 +16,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(cookieParser());  
-
+app.get("/", (req:Request, res:Response) => {
+    res.json({message:"Welcome to the API"});
+})
 app.post("/auth/register", signUp);
 app.post("/auth/login", signIn)
 app.get("/api/users/:id",verifyToken,getRecords)
