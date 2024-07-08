@@ -5,8 +5,7 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "dev": "nodemon src/server.ts",
-    "build": "tsc",
-    "postinstall": "prisma generate",
+    "build": "tsc && prisma generate",
     "vercel-build": "echo hello",
     "test": "vitest tests"
   },
