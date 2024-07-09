@@ -6,6 +6,6 @@ module.exports = {
     },
     testMatch: ['**/tests/**/*.test.ts', '**/tests/**/*.spec.ts'],
     moduleFileExtensions: ['ts', 'js'],
-    setupFilesAfterEnv: ['<rootDir>/__mocks__/dbts'],
+    setupFilesAfterEnv: ['<rootDir>/__mocks__/db.ts'],
   };
   

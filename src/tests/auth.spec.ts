@@ -25,8 +25,8 @@ describe('Token Generation', () => {
       expect(decoded.exp).toBeLessThanOrEqual(currentTime + expiresIn); 
     });
 
-    it('should verify a token and return correct user details', () => {
-        const user = { userId: '12345', email: 'test@example.com' };
+    it('should verify a token and return correct user details', () => { 
+        const user = { userId: '12345', email: 'test@example.com' }; 
         const token = generateToken(user);
         
         const verified = verifyToken(token) as jwt.JwtPayload;
